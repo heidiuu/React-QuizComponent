@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
-const QuizQuestionButton = (props) => {
-  const handleClick = () => {
-    props.clickHandler(props.button_text);
-  };
-  return (
-    <li>
-      <button onClick={handleClick}>{props.button_text}</button>
-    </li>
-  );
-};
+class QuizQuestionButton extends Component {
+  render() {
+    this.handleClick = () => {};
+    this.props.clickHandler(this.props.button_text);
+    return (
+      <li>
+        <button onClick={this.handleClick.bind(this)}>
+          {this.props.button_text}
+        </button>
+      </li>
+    );
+  }
+}
 
 export default QuizQuestionButton;

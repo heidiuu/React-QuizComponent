@@ -1,13 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Quiz from "./Quiz";
 
-const App = () => {
-  return (
-    <div>
-      <Quiz />
-    </div>
-  );
-};
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Quiz />
+      </div>
+    );
+  }
+}
 
 export default App;
